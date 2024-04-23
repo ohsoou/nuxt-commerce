@@ -1,0 +1,14 @@
+export const FILTER_DEFAULT_VALUE = {
+    EMPTY: '',
+    EMPTY_ARRAY: [],
+    EMPTY_NUM: 0,
+    PAGE_NO: '0',
+    PAGE_SIZE: '30',
+    SHOP_SORT_DEFAULT: 'saleDesc',
+    SEARCH_SORT_DEFAULT: 'ranking',
+    PRICE_CUSTOM: 'G',
+    BRAND_SHOW_INIT: 4,
+    CATEGORY_SHOW_INIT: 5,
+    MIN_PRICE_LIMIT: 1,
+    MAX_PRICE_LIMIT: 9999
+}
