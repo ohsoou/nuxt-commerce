@@ -1,9 +1,10 @@
 <script setup lang="ts">
 // 객체주소 재할당 방지
-import type {GoodsAttInfo, GoodsPackageProps, RelGoodsInfo} from "~/types/goods/GoodsDetailDataModel";
+import type {GoodsAttInfo, RelGoodsInfo} from "~/types/goods/GoodsDetailDataModel";
 import type {GoodsSummary} from "~/types/display/GoodsSummaryDataModel";
 import {ref} from "vue";
-import ProductDetailReview from "~/components/goods/detail/review/ProductDetailReview.vue";
+import type {GoodsPackageProps} from "~/types/goods/GoodsItemProps";
+import GoodsDetailReview from "~/components/goods/detail/review/GoodsDetailReview.vue";
 
 const emptyArr = [] as GoodsSummary[]
 
@@ -18,7 +19,7 @@ interface GoodsDetailTabProps extends GoodsPackageProps {
 
 const {
   isPackage = false,
-  isPackageItemDetail = false,
+  isGoodsInPackage = false,
   goodsDesc,
   goodsNo,
   goodsAttInfo,
@@ -64,7 +65,7 @@ const splitterModel = ref(20)
           </q-tab-panel>
 
           <q-tab-panel name="reviews">
-            <ProductDetailReview/>
+<!--            <GoodsDetailReview/>-->
           </q-tab-panel>
 
           <q-tab-panel name="qna">

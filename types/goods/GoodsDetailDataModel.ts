@@ -1,5 +1,5 @@
-import type {PrGoodsItemInfo} from "~/types/goods/GoodsItemDataModel";
-import type {PrGoodsSafeCertiHist} from "~/types/goods/GoodsSafeCertiHistDataModel";
+import type {ErrorType} from "~/types/common/Error";
+
 
 export type GoodsBase = {
     goodsNo: string
@@ -113,18 +113,6 @@ export type GiftInfo = {
     }[]
 }
 
-export type PrAssocGoodsInfo = {
-    goodsNo: string
-    asctGbCd: string
-    asctGoodsNo: string
-    sortSeq: string
-    goodsNm: string
-    brandNm: string
-    contFilePathNm: string
-    salePrc: number
-    buyrAgeLmtCd: string
-}
-
 export type AssociationGoodsInfo = {
     goodsNo: string
     saleStatCd: string
@@ -156,6 +144,27 @@ export type RelGoodsInfo = {
     sortSeq: string
 }
 
+export type GoodsItemInfo = {
+    goodsNo: string
+    goodsNotiLisartCd: string
+    goodsNotiItemCd: string
+    langCd: string
+    notiItemCmt: string
+    sortSeq: string
+    notiItemNm: string
+    goodsNotiLisartNm: string
+}
+
+export type GoodsSafeCertiHist = {
+    goodsNo: string
+    safeCertiGbCd: string
+    safeCertiNm: string
+    safeCertiNo: string
+    aplyStrDt: string
+    aplyEndDt: string
+    safeCertiOrnNm: string
+}
+
 export type GoodsDetailInfo = {
     isPackage: boolean
     goodsBase: GoodsBase
@@ -164,11 +173,11 @@ export type GoodsDetailInfo = {
     goodsDesc: GoodsDescInfo
     revSummary: RevSummary
     associateGoodsList: AssociationGoodsInfo[]
-    goodsItemInfoList: PrGoodsItemInfo[]
-    goodsSafeCertiHistList: PrGoodsSafeCertiHist[]
+    goodsItemInfoList: GoodsItemInfo[]
+    goodsSafeCertiHistList: GoodsSafeCertiHist[]
     goodsAttInfo: GoodsAttInfo[]
     itmNoList: string[]
-}
+} & ErrorType
 
 export type PackageGoodsInfo = GoodsDetailInfo & {
     repGoodsBase: GoodsBase
@@ -195,10 +204,5 @@ export interface BaseDeliveryInfo {
 
 export type GoodsCategoryNavItem = {
     href: string
-}
-
-export interface GoodsPackageProps {
-    isPackage?: boolean,
-    isPackageItem?: boolean,
-    isPackageItemDetail?: boolean,
+    title: string
 }

@@ -9,7 +9,7 @@ const { goodsList } = defineProps<{ goodsList: SearchDataType[] }>()
 <template>
   <div class="q-pa-md row items-start q-gutter-md">
     <q-card class="goods-card" flat bordered v-for="goods in goodsList">
-      <NuxtLink :to="`/goods/detail/${goods.goodsNo}`" target="_self" class="text-black" style="text-decoration: none">
+      <NuxtLink :to="`/goods/detail/${goods.goodsNo}`" class="text-black" style="text-decoration: none">
         <ProductItem :data="goods"/>
       </NuxtLink>
     </q-card>

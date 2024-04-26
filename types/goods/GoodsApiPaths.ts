@@ -6,7 +6,7 @@ type GoodsDetailProps = {
 }
 
 
-export const paths = {
+export const goodsDtailpaths = {
     goodsDetail({
                     goodsNo,
                     infDispCtgNoGbCd,

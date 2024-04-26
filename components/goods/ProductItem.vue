@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
 import s3Image from "~/utils/commonUtils";
-import type {ProductItemProps} from "~/types/goods/ProductItemProps";
+import type {GoodsItemProps} from "~/types/goods/GoodsItemProps";
 
-const { data, hideReviewStar } = defineProps<ProductItemProps>()
+const { data, hideReviewStar } = defineProps<GoodsItemProps>()
 
 // goods price
 const showDcRate = Boolean(data.dcRate && Number(data.dcRate) > 0)

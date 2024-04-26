@@ -31,8 +31,15 @@ export default defineNuxtConfig({
   },
   modules: [
     '@pinia/nuxt',
-    'nuxt-quasar-ui'
+    'nuxt-quasar-ui',
+    // '@nuxtjs/tailwindcss'
   ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   quasar: {
     config: {
       brand: {

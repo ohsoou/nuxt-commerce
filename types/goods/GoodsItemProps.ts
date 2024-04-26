@@ -57,7 +57,7 @@ export interface GoodsUnitOptionalProps {
 /**
  * ProductItem 내 사용 props
  * */
-export interface ProductItemProps extends GoodsUnitOptionalProps {
+export interface GoodsItemProps extends GoodsUnitOptionalProps {
     data: GoodsUnit
 }
 
@@ -69,3 +69,9 @@ export interface ProductItemProps extends GoodsUnitOptionalProps {
 //     data: GoodsSummary[] | AssociationGoodsInfo[] | SearchDataType[]
 //     dataType: keyof typeof GoodsUnitDataTypeFunction
 // }
+
+export interface GoodsPackageProps {
+    isPackage?: boolean, // 묶음 상품 여부
+    isGoodsInPackage?: boolean, // 묶음 상품 내 상품 여부
+    // isGoodsInPackageDetail?: boolean,
+}

@@ -1,5 +1,3 @@
 {
-  "extends": "../.nuxt/tsconfig.server.json",
-  "jsx": "preserve",
-  "jsxImportSource": "vue"
+  "extends": "../.nuxt/tsconfig.server.json"
 }

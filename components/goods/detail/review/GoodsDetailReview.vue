@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import type {GoodsPackageProps, RelGoodsInfo} from "~/types/goods/GoodsDetailDataModel";
+import type {RelGoodsInfo} from "~/types/goods/GoodsDetailDataModel";
 import type {GoodsSummary} from "~/types/display/GoodsSummaryDataModel";
+import type {GoodsPackageProps} from "~/types/goods/GoodsItemProps";
 
 interface GoodsDetailTabReviewProps extends GoodsPackageProps {
   goodsNo: string
@@ -11,7 +12,7 @@ interface GoodsDetailTabReviewProps extends GoodsPackageProps {
 
 
 const {
-  isPackageItemDetail = false,
+  isGoodsInPackage = false,
   isPackage = false,
   goodsNo,
   initIndex,
@@ -23,12 +24,12 @@ const {
 </script>
 
 <template>
-  <q-rating
-      v-model="data.goodsRevStarscrAvgVal"
-      size="1rem"
-      color="grey-7"
-      readonly
-  />
+<!--  <q-rating-->
+<!--      v-model=""-->
+<!--      size="1rem"-->
+<!--      color="grey-7"-->
+<!--      readonly-->
+<!--  />-->
 </template>
 
 <style scoped>
